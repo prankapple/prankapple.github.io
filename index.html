@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prankapple is a dev</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:white;
+    color:black;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* TOP BAR */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background: linear-gradient(to right,#ff6a00,#ee0979);
+    padding:10px 20px;
+}
+
+.topbar-left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.topbar img{
+    border-radius:50%;
+}
+
+.topbar h1{
+    margin:0;
+    color:white;
+}
+
+/* NAV */
+
+.nav a{
+    margin:0 10px;
+    text-decoration:none;
+    color:rgb(255, 255, 255);
+    font-weight:bold;
+}
+
+/* BUTTON */
+
+.toggle-btn{
+    padding:6px 12px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.gradient-text{
+    font-size:60px;
+    font-weight:800;
+    background: linear-gradient(to right,#ff6a00,#ee0979);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    font-size:20px;
+    margin-top:10px;
+}
+
+/* random thing */
+a {
+    color: #ff6a00;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* SECTIONS */
+
+.section{
+    padding:60px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+/* PROJECTS */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    border-radius:10px;
+    padding:20px;
+    background:#f3f3f3;
+    transition:transform 0.2s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+.skill {
+    background: #e0e0e0;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: all 0.3s ease; /* <-- smooth transition */
+    cursor: pointer;
+}
+
+/* On hover, expand size */
+.skill:hover {
+    transform: scale(1.1);   /* optional: scale up slightly */
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#f0f0f0;
+}
+
+/* DARK MODE */
+
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .topbar{
+    background:linear-gradient(to right,#ff6a00,#ee0979);
+}
+
+.dark-mode .nav a{
+    color:white;
+}
+
+.dark-mode .card{
+    background:#1f1f1f;
+}
+
+.dark-mode .skill{
+    background:#2a2a2a;
+}
+
+.dark-mode footer{
+    background:#1e1e1e;
+}
+
+.email {
+    color: #ff6a00;
+    text-decoration: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+
+<div class="topbar-left">
+<img src="./resc/profilepic.png" width="50" onclick="window.location.href='https://github.com/prankapple'">
+<h1>Prankapple</h1>
+</div>
+
+<div class="nav">
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+
+<button class="toggle-btn" onclick="toggleMode()">☀️</button>
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1 class="gradient-text">Prankapple</h1>
+
+<p>Developer • Creator • Builder</p>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="section">
+
+<h2>About Me</h2>
+
+<p style="text-align:center;">
+Hi! I'm Prankapple, a dev that just <strong>✨LIKES✨</strong> making stuff.
+</p>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" class="section">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<img src="https://avatars.githubusercontent.com/u/261192415?s=200&v=4" width="50px">
+<h3>Keycap</h3>
+<p>Cursor, but <strong>🟢 ONLINE</strong></p>
+<a href="https://keycapeditor.github.io">Try it here</a>
+</div>
+
+<div class="card">
+<img src="https://avatars.githubusercontent.com/u/264227720?s=200&v=4" width="50px">
+<h3>Corelyn AI</h3>
+<p>AI ecosystem but made non-profesionaly</p>
+<a href="https://corelyn.ro">Try it here</a>
+</div>
+
+<div class="card">
+<img src="https://prankapplesoftware.github.io/runwithpower/rwpicon.png" width="50px">
+<h3>Run With Power</h3>
+<p>Application that lets you run other apps on Windows as Trusted Installer</p>
+<a href="https://prankapplesoftware.github.io/runwithpower/">Try/Download it here</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="section">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />HTML</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />Python</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />C Sharp</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" />Node JS</div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />JavaScript</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="section contact">
+
+<h2>Contact</h2>
+
+<p>Discord: <a href="discord://-/users/1262406176197312593">betterdisc • Prankapple</a></p>
+<p>Email: <a class="email" href="mailto:prankapple@is.notaskid.ong" >prankapple@is.notaskid.ong</a></p>
+<p>GitHub: <a href="https://github.com/prankapple">github.com/prankapple</a></p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+© 2026 Prankapple
+</footer>
+
+<script>
+
+function toggleMode(){
+    document.body.classList.toggle("dark-mode");
+}
+
+toggleMode()
+
+</script>
+
+</body>
+</html>
