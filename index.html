@@ -1,245 +1,272 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Prankapple is a dev</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
-body {
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:white;
-    color:black;
-    transition: background 0.3s, color 0.3s;
+body{
+margin:0;
+font-family:Arial, sans-serif;
+color:white;
+background:
+radial-gradient(circle at 20% 20%, #ff6a00, transparent 40%),
+radial-gradient(circle at 80% 30%, #ee0979, transparent 40%),
+radial-gradient(circle at 50% 90%, #7928ca, transparent 40%),
+#0f0f13;
+background-attachment:fixed;
 }
 
-/* TOP BAR */
+/* GLASS EFFECT */
+
+.glass{
+background: rgba(255,255,255,0.08);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:12px;
+}
+
+/* TOPBAR */
 
 .topbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background: linear-gradient(to right,#ff6a00,#ee0979);
-    padding:10px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 25px;
+margin:15px;
 }
 
 .topbar-left{
-    display:flex;
-    align-items:center;
-    gap:10px;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
 .topbar img{
-    border-radius:50%;
+border-radius:50%;
+cursor:pointer;
 }
 
 .topbar h1{
-    margin:0;
-    color:white;
+margin:0;
+font-size:20px;
 }
 
 /* NAV */
 
 .nav a{
-    margin:0 10px;
-    text-decoration:none;
-    color:rgb(255, 255, 255);
-    font-weight:bold;
+margin:0 10px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+opacity:0.8;
+}
+
+.nav a:hover{
+opacity:1;
 }
 
 /* BUTTON */
 
 .toggle-btn{
-    padding:6px 12px;
-    border:none;
-    border-radius:6px;
-    cursor:pointer;
+border:none;
+padding:6px 12px;
+border-radius:8px;
+cursor:pointer;
+background:rgba(255,255,255,0.1);
+color:white;
 }
 
 /* HERO */
 
 .hero{
-    text-align:center;
-    padding:100px 20px;
+text-align:center;
+padding:120px 20px;
+}
+
+.hero img{
+border-radius:50%;
+cursor:pointer;
 }
 
 .gradient-text{
-    font-size:60px;
-    font-weight:800;
-    background: linear-gradient(to right,#ff6a00,#ee0979);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+font-size:60px;
+font-weight:900;
+background: linear-gradient(to right,#ff6a00,#ee0979);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .hero p{
-    font-size:20px;
-    margin-top:10px;
+font-size:20px;
+opacity:0.8;
 }
 
-/* random thing */
-a {
-    color: #ff6a00;
-    text-decoration: none;
-    transition: color 0.2s ease;
+/* LINKS */
+
+a{
+color:#ff8a3c;
+text-decoration:none;
 }
 
-a:hover {
-    text-decoration: underline;
+a:hover{
+text-decoration:underline;
 }
-
 
 /* SECTIONS */
 
 .section{
-    padding:60px 20px;
-    max-width:1000px;
-    margin:auto;
+padding:60px 20px;
+max-width:1000px;
+margin:auto;
 }
 
 .section h2{
-    text-align:center;
-    margin-bottom:40px;
+text-align:center;
+margin-bottom:40px;
 }
 
 /* PROJECTS */
 
 .projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
-    border-radius:10px;
-    padding:20px;
-    background:#f3f3f3;
-    transition:transform 0.2s;
+padding:25px;
+transition:0.25s;
+}
+
+.card img{
+margin-bottom:10px;
 }
 
 .card:hover{
-    transform:scale(1.05);
+transform:translateY(-6px) scale(1.02);
 }
 
 /* SKILLS */
 
 .skills{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
 }
 
-.skill {
-    background: #e0e0e0;
-    padding: 10px 15px;
-    border-radius: 20px;
-    display: inline-block;
-    transition: all 0.3s ease; /* <-- smooth transition */
-    cursor: pointer;
+.skill{
+display:flex;
+align-items:center;
+gap:6px;
+padding:10px 15px;
+border-radius:20px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(6px);
+transition:0.2s;
 }
 
-/* On hover, expand size */
-.skill:hover {
-    transform: scale(1.1);   /* optional: scale up slightly */
+.skill img{
+width:18px;
+}
+
+.skill:hover{
+transform:scale(1.1);
 }
 
 /* CONTACT */
 
 .contact{
-    text-align:center;
-}
-
-.contact a{
-    text-decoration:none;
-    font-weight:bold;
+text-align:center;
 }
 
 /* FOOTER */
 
 footer{
-    text-align:center;
-    padding:20px;
-    background:#f0f0f0;
+text-align:center;
+padding:20px;
+margin:20px;
 }
+
+.badge{
+all: unset;
+display: inline-block;
+border-radius:5px;
+}
+
 
 /* DARK MODE */
 
 .dark-mode{
-    background:#121212;
-    color:white;
-}
-
-.dark-mode .topbar{
-    background:linear-gradient(to right,#ff6a00,#ee0979);
-}
-
-.dark-mode .nav a{
-    color:white;
-}
-
-.dark-mode .card{
-    background:#1f1f1f;
-}
-
-.dark-mode .skill{
-    background:#2a2a2a;
-}
-
-.dark-mode footer{
-    background:#1e1e1e;
-}
-
-.email {
-    color: #ff6a00;
-    text-decoration: none;
+background:
+radial-gradient(circle at 20% 20%, #ff6a00, transparent 40%),
+radial-gradient(circle at 80% 30%, #ee0979, transparent 40%),
+radial-gradient(circle at 50% 90%, #7928ca, transparent 40%),
+#050505;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- TOP BAR -->
+<!-- TOPBAR -->
 
-<div class="topbar">
+<div class="topbar glass">
 
 <div class="topbar-left">
-<img src="./resc/profilepic.png" width="50" onclick="window.location.href='https://github.com/prankapple'">
+
+<img src="./resc/profilepic.png" width="50"
+onclick="window.location.href='https://github.com/prankapple'">
+
 <h1>Prankapple</h1>
+
 </div>
 
 <div class="nav">
+
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
+
 </div>
 
 <button class="toggle-btn" onclick="toggleMode()">☀️</button>
 
 </div>
 
+
 <!-- HERO -->
 
 <section class="hero">
 
-<img src="./resc/profilepic.png" width="100" onclick="window.location.href='https://github.com/prankapple'">
-    
+<img src="./resc/profilepic.png" width="110"
+onclick="window.location.href='https://github.com/prankapple'">
+
 <h1 class="gradient-text">Prankapple</h1>
 
 <p>Developer • Creator • Builder</p>
 
 <a href="https://github.com/prankapple" target="_blank">
-  <img src="https://camo.githubusercontent.com/bca6f70f5f4af820ec8ca6f21c06ea39a02d03f4d6bd966ffba04bb908b22de9/68747470733a2f2f686974732e73682f6769746875622e636f6d2f7072616e6b6170706c652f7072616e6b6170706c652e7376673f7374796c653d666f722d7468652d6261646765266c6162656c3d50726f66696c65253230566965777326636f6c6f723d7768697465266c6162656c436f6c6f723d626c61636b266c6f676f3d676974687562" alt="Profile Views">
+
+<img class="badge"
+src="https://camo.githubusercontent.com/bca6f70f5f4af820ec8ca6f21c06ea39a02d03f4d6bd966ffba04bb908b22de9/68747470733a2f2f686974732e73682f6769746875622e636f6d2f7072616e6b6170706c652f7072616e6b6170706c652e7376673f7374796c653d666f722d7468652d6261646765266c6162656c3d50726f66696c65253230566965777326636f6c6f723d7768697465266c6162656c436f6c6f723d626c61636b266c6f676f3d676974687562">
+
 </a>
 
 </section>
 
+
 <!-- ABOUT -->
 
-<section id="about" class="section">
+<section id="about" class="section glass">
 
 <h2>About Me</h2>
 
@@ -247,8 +274,8 @@ footer{
 Hi! I'm Prankapple, a dev that just <strong>✨LIKES✨</strong> making stuff.
 </p>
 
-
 </section>
+
 
 <!-- PROJECTS -->
 
@@ -258,30 +285,50 @@ Hi! I'm Prankapple, a dev that just <strong>✨LIKES✨</strong> making stuff.
 
 <div class="projects">
 
-<div class="card">
-<img src="https://avatars.githubusercontent.com/u/261192415?s=200&v=4" width="50px">
+<div class="card glass">
+
+<img src="https://avatars.githubusercontent.com/u/261192415?s=200&v=4" width="50">
+
 <h3>Keycap</h3>
+
 <p>Cursor, but <strong>🟢 ONLINE</strong></p>
+
 <a href="https://keycapeditor.github.io">Try it here</a>
+
 </div>
 
-<div class="card">
-<img src="https://avatars.githubusercontent.com/u/264227720?s=200&v=4" width="50px">
+
+<div class="card glass">
+
+<img src="https://avatars.githubusercontent.com/u/264227720?s=200&v=4" width="50">
+
 <h3>Corelyn AI</h3>
-<p>AI ecosystem but made non-profesionaly</p>
+
+<p>AI ecosystem but made non-professionally</p>
+
 <a href="https://corelyn.ro">Try it here</a>
+
 </div>
 
-<div class="card">
-<img src="https://prankapplesoftware.github.io/runwithpower/rwpicon.png" width="50px">
+
+<div class="card glass">
+
+<img src="https://prankapplesoftware.github.io/runwithpower/rwpicon.png" width="50">
+
 <h3>Run With Power</h3>
-<p>Application that lets you run other apps on Windows as Trusted Installer</p>
-<a href="https://prankapplesoftware.github.io/runwithpower/">Try/Download it here</a>
+
+<p>Run apps as TrustedInstaller on Windows</p>
+
+<a href="https://prankapplesoftware.github.io/runwithpower/">
+Try / Download
+</a>
+
 </div>
 
 </div>
 
 </section>
+
 
 <!-- SKILLS -->
 
@@ -291,46 +338,78 @@ Hi! I'm Prankapple, a dev that just <strong>✨LIKES✨</strong> making stuff.
 
 <div class="skills">
 
-<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />HTML</div>
-<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />Python</div>
-<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />C Sharp</div>
-<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" />Node JS</div>
-<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />JavaScript</div>
+<div class="skill">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+HTML
+</div>
+
+<div class="skill">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+Python
+</div>
+
+<div class="skill">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg">
+C#
+</div>
+
+<div class="skill">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+Node
+</div>
+
+<div class="skill">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+JavaScript
+</div>
 
 </div>
 
 </section>
 
+
 <!-- CONTACT -->
 
-<section id="contact" class="section contact">
+<section id="contact" class="section contact glass">
 
 <h2>Contact</h2>
 
-<p>Discord: <a href="discord://-/users/1262406176197312593">betterdisc • Prankapple</a></p>
-<p>Email: <a class="email" href="mailto:prankapple@is.notaskid.ong" >prankapple@is.notaskid.ong</a></p>
-<p>GitHub: <a href="https://github.com/prankapple">github.com/prankapple</a></p>
-
-<a href="https://github.com/prankapple" target="_blank">
-  <img src="https://camo.githubusercontent.com/bca6f70f5f4af820ec8ca6f21c06ea39a02d03f4d6bd966ffba04bb908b22de9/68747470733a2f2f686974732e73682f6769746875622e636f6d2f7072616e6b6170706c652f7072616e6b6170706c652e7376673f7374796c653d666f722d7468652d6261646765266c6162656c3d50726f66696c65253230566965777326636f6c6f723d7768697465266c6162656c436f6c6f723d626c61636b266c6f676f3d676974687562" alt="Profile Views">
+<p>Discord:
+<a href="discord://-/users/1262406176197312593">
+betterdisc • Prankapple
 </a>
+</p>
 
+<p>Email:
+<a href="mailto:prankapple@is.notaskid.ong">
+prankapple@is.notaskid.ong
+</a>
+</p>
+
+<p>GitHub:
+<a href="https://github.com/prankapple">
+github.com/prankapple
+</a>
+</p>
 
 </section>
 
+
 <!-- FOOTER -->
 
-<footer>
-© 2026 Prankapple • Domain from <a href="https://is-a.dev/" >.is-a.dev</a>
+<footer class="glass">
+
+© 2026 Prankapple • Domain from
+<a href="https://is-a.dev/">.is-a.dev</a>
+
 </footer>
+
 
 <script>
 
 function toggleMode(){
-    document.body.classList.toggle("dark-mode");
+document.body.classList.toggle("dark-mode");
 }
-
-toggleMode()
 
 </script>
 
