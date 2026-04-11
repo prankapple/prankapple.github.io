@@ -244,8 +244,13 @@
     <section id="about" class="section glass">
         <h2>About Me</h2>
         <p style="text-align:center;">
-            Hi! I'm Prankapple, a dev that just <strong>✨LIKES✨</strong> making stuff.
+            Hi! I'm Prankapple, a Romainan dev that just <strong>✨LIKES✨</strong> making stuff.
         </p>
+        <p style="text-align:center;">For me it's <code style=" color:orange; text-shadow:
+        0 0 5px #ff6a00,
+        0 0 10px #ff6a00,
+        0 0 20px #ee0979,
+        0 0 40px #ee0979;" id="roTime">ddsd</code></p>
     </section>
 
 
@@ -359,6 +364,20 @@
         function toggleMode() {
             document.body.classList.toggle("dark-mode");
         }
+
+        function updateRomaniaClock() {
+            const now = new Date();
+
+            const time = now.toLocaleTimeString("en-US", {
+                timeZone: "Europe/Bucharest"
+            });
+
+            document.getElementById("roTime").textContent = time;
+        }
+
+        setInterval(updateRomaniaClock, 1000);
+        updateRomaniaClock();
+
     </script>
 
 </body>
